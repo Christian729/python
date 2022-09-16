@@ -1,0 +1,19 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.row{
+    color: purple;
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+a{
+    display: flex;
+    justify-content: space-evenly;
+    
+}
