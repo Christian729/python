@@ -1,0 +1,11 @@
+*{
+    margin: 10px;
+    padding: 10px;
+}
+.rows{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}

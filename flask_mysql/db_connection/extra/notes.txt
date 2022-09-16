@@ -1,0 +1,14 @@
+okay so im trying to make the users_CR and I want to send info into the 
+    database and then retrieve it in another html page.
+    Im still new to the concept of session, but it looks like I wont be 
+    using it in this case. I say that because I try using it like this:
+
+@app.route('/create_user', methods=["POST"])
+def create_user():
+    data=[
+        session["first_name"] == request.form["first_name"],
+        session["last_name"] == request.form["last_name"],
+        session["email"] == request.form["email"]
+    ]
+
+This does not work!

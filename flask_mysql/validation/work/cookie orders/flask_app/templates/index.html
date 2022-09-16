@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css') }}">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <title>Cookie Orders</title>
+</head>
+<body>
+    <div>
+        <h1>Cookie Orders</h1>
+    </div>
+    <div class="hey">
+        <h3>All Orders</h3>
+        <h3><a href="/show/new_order">+ New Order</a></h3>
+    </div>
+    <div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <td>Customer Name</td>
+                    <td>Cookie Type</td>
+                    <td>Number of Boxes</td>
+                    <td>Actions</td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for order in orders %}
+                <tr>
+                    <td>{{order.name}}</td>
+                    <td>{{order.cookie_type}}</td>
+                    <td>{{order.num_box}}</td>
+                    <td><a href="/show/edit/{{order.id}}">edit</a>
+                        <a href="/show/delete/{{order.id}}">Delete</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
