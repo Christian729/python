@@ -1,0 +1,8 @@
+server {
+    listen 80;
+    server_name 99.79.76.107;
+    location / {
+        include proxy_params;
+        proxy_pass http://unix:/home/ubuntu/3rd-deploy/3rd-Attempt.sock;
+    }
+}

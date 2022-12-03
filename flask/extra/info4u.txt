@@ -10,6 +10,8 @@ Everytime you start a project. Just fyi
 
 AND ALWAYS EXIT THE SHELL!!!!!
 
+sometimes you wanna add the bcrypt
+
 
 
 

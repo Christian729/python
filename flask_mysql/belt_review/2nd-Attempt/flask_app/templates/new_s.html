@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css') }}">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="d-flex justify-content-between">
+        <div>
+            <h2 >Add a New Show!</h2>
+        </div>
+        <div>
+            <a href="/dashboard">TV Shows</a>
+            <a href="/logout">logout</a>
+        </div>
+    </div>
+    
+    <form action="/create/show" method="post" class="d-flex">
+        <div>
+            {% with messages = get_flashed_messages() %}     <!-- declare a variable called messages -->
+                {% if messages %}                            <!-- check if there are any messages -->
+                    {% for message in messages %}            <!-- loop through the messages -->
+                        <p>{{message}}</p>                   <!-- display each message in a paragraph tag -->
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+            <div class="form-control">
+                <label for="s_name">Name:</label>
+                <input type="text" name="s_name" class="form-control">
+            </div>
+            <div class="form-control">
+                <label for="description">Description:</label>
+                <input type="text" name="description" class="form-control">
+            </div>
+            <div class="form-control">
+                <label for="network">Network:</label>
+                <input type="text" name="network" class="form-control">
+            </div>
+            <div class="form-control">
+                <label for="release_date">Release date:</label>
+                <input type="date" name="release_date" class="form-control">
+            </div>
+            
+            <div class="form-group">
+                <input type="submit" value="Add" class="btn btn-primary">
+            </div>
+        </div>
+        
+    </form>
+</body>
+</html>
