@@ -10,10 +10,14 @@
     <title>Recipe Share</title>
 </head>
 <body>
+    <!-- So Im thinking we want to add way more to this in order to make our web application more 
+    professional looking. 
+    Let's start by actually making a solid navbar -->
     <h1>Hello {{user.first_name}}</h1>
     <div class="d-flex justify-content-between">
         <div>
             <h3>All posted recipes:</h3>
+            <!-- Later on Im thinking about making a way to post images to the platform  -->
         </div>
         <div class="d-flex">
             <h3><a href="/recipes">+ Create</a></h3>
@@ -29,7 +33,10 @@
                     <td>Under</td>
                     <td>Created on</td>
                     <td>Created by</td>
-                    <td>Actions</td>
+                    <td>Actions</td> 
+                    <!--  so under actions we already have some good crud functionality, im thinking
+                    about adding a favorites or simply showing the recipes that you(the user) has 
+                    already liked in a private hub based on the user -->
                 </tr>
             </thead>
             <tbody>
