@@ -6,31 +6,16 @@ python -m pipenv shell
 
 new_project_folder $ pipenv install PyMySQL flask
 
-Everytime you start a project. Just fyi
+Every time you start a project. Just fyi
 
 AND ALWAYS EXIT THE SHELL!!!!!
 
 sometimes you wanna add the bcrypt
 
 
+to start:
+    python -m pipenv shell
+    python server.py 
 
 
-<h2 style="color:blue; text-align:center;
-        height: 200px; width: 200px;">lol</h2>
-        < so far we this code gives us a "welcome!"
-        followed by a blue lol, im thinking maybe
-        we can add a border to it and get rid of the lol>
 
-        {% for x in range(3,num): %}
-            <p class="cBlock"></p>
-        {% endfor %}
-        {% if color == 'green' %}
-            <style> .cBlock{background-color: green;} </style>
-        {% endif %}
-        {% if color == 'red' %}
-            <style> .cBlock{background-color: red;} </style>
-        {% endif %}
-        {% if color == 'gray' %}
-            <style> .cBlock{background-color: gray;} </style>
-        {% endif %}
-        

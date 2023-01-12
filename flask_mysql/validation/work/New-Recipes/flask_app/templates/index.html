@@ -13,46 +13,46 @@
     <!-- come back to this and finish editing the registration
     we may as well make the login page similar -->
     <div class="full-screen-container">
-        <div class="d-flex justify-content-around">
-            <div class="form">
-                <form action="/register" method="post" class="col-4 p-4" >
-                    <H1>Register</H1>
-                    <div class="form-group" >
-                        {% with messages = get_flashed_messages(category_filter=['register']) %}     <!-- declare a variable called messages -->
-                            {% if messages %}                            <!-- check if there are any messages -->
-                                {% for message in messages %}            <!-- loop through the messages -->
-                                    <p>{{message}}</p>                   <!-- display each message in a paragraph tag -->
-                                {% endfor %}
-                            {% endif %}
-                        {% endwith %}
+        <div class="r-l-container">
+            
+                <H1 class="r-l-title">Register</H1>
+                <form action="/register" method="post" class="form" >
+                    
+                    {% with messages = get_flashed_messages(category_filter=['register']) %}     <!-- declare a variable called messages -->
+                        {% if messages %}                            <!-- check if there are any messages -->
+                            {% for message in messages %}            <!-- loop through the messages -->
+                                <p>{{message}}</p>                   <!-- display each message in a paragraph tag -->
+                            {% endfor %}
+                        {% endif %}
+                    {% endwith %}
+                    <div class="input-group" >
                         <label for="first_name">First Name:</label>
-                        <input type="text" name="first_name" class="form-control">
+                        <input type="text" name="first_name">
                     </div>
-                    <div class="form-group">
+                    <div class="input-group">
                         <label for="last_name">Last Name:</label>
-                        <input type="text" name="last_name" class="form-control">
+                        <input type="text" name="last_name" >
                     </div>
-                    <div class="form-group">
+                    <div class="input-group">
                         <label for="email">Email:</label>
-                        <input type="text" name="email" class="form-control" >
+                        <input type="text" name="email" >
                     </div>
-                    <div class="form-group">
+                    <div class="input-group">
                         <label for="password">Password:</label>
-                        <input type="password" name="password" class="form-control">
+                        <input type="password" name="password" >
                     </div>
-                    <div class="form-group">
+                    <div class="input-group">
                         <label for="confirm">Confirm Password:</label>
-                        <input type="password" name="confirm" class="form-control">
+                        <input type="password" name="confirm">
                     </div>
-                    <div class="form-group">
+                    <div class="input-group">
                         <input type="submit" value="Add User" class="btn btn-primary">
                     </div>
+                    <a href="/">Already have an account? Go to Login</a>
                 </form>
             </div>
             
             
-            
-        </div>
     </div>
     
 </body>
