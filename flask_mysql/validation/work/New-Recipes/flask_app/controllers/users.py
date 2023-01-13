@@ -28,6 +28,10 @@ def register():
     session['user_id'] = id
     return redirect('/dashboard')
 
+@app.route('/logging')
+def logging():
+    return render_template('Login.html')
+
 @app.route('/login', methods=['POST'])
 def login():
     user= User.get_by_email(request.form)
